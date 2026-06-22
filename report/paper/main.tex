@@ -33,7 +33,7 @@
 \maketitle
 \setcounter{footnote}{0}
 \begin{abstract}
-This work presents a reinforcement learning approach to compress Chain-of-Thought reasoning in small language models without degrading accuracy. Shortening reasoning through prompt engineering lowers mathematical performance, whereas enforcing brevity via a naive length penalty in Group Relative Policy Optimization triggers reward hacking and policy collapse. To resolve this, the training objective is regularized against the base model to ensure controlled compression. Evaluated on the GSM8K dataset with the Qwen2.5-0.5B model, the optimized policy achieves 49 percent accuracy at a mean length of 222 tokens. This improves accuracy by 9 percentage points while reducing reasoning length by 23 percent compared to the untrained baseline.
+This work presents a reinforcement learning approach to compress Chain-of-Thought reasoning in small language models without degrading accuracy. Shortening reasoning through prompt engineering lowers mathematical performance, whereas enforcing brevity via a naive length penalty in Group Relative Policy Optimization triggers reward hacking and policy collapse. To resolve this, the training objective is regularized against the base model to ensure controlled compression. Evaluated on the GSM8K dataset with the Qwen2.5-0.5B model, the optimized policy achieves 49 percent accuracy at a mean length of 222 tokens. This improves accuracy by 9 percentage points while reducing reasoning length by 23 percent compared to the untrained baseline. Code is available at \href{https://github.com/fl448341/grpo_cot_compression}{\textit{GitHub}}.
 \end{abstract}
 
 \section{Introduction}
