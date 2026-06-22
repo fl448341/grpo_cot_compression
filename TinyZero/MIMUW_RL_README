@@ -1,0 +1,11 @@
+All adapted/created files are in verl directory:
+
+utils/reward_score/gsm8k_robust.py
+utils/reward_score/length_reward.py
+utils/torch_functional.py
+workers/fsdp_workers.py
+workers/actor/dp_actor.py
+trainer/main_ppo.py
+trainer/ppo/ray_trainer.py
+
+those changes/additions are marked by either "# adapted/created for RL COURSE at MIMUW" or "# custom by fl"

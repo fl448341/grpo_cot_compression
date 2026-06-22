@@ -1,0 +1,30 @@
+Problem (answer 27): Morisette and Kael were asked to bring fruits. Morisette brought 5 apples and 8 oranges,
+while Kael brought twice the amount of apples and half the number of oranges than Morisette. How many fruits do they have in total?
+
+[negative lambda | 417 tok | WRONG (pred 30, loses track)] # as wanted longer than baseline
+To determine the total number of fruits that Morisette and Kael brought, we need to calculate the number of each type of fruit separately and then sum them up.
+
+First, let's find out how many apples Morisette brought:
+\[ \text{Number of apples} = 5 \]
+
+Next, let's find out how many oranges Kael brought:
+\[ \text{Number of oranges} = 2 \times \text{Number of apples} = 2 \times 5 = 10 \]
+
+Now, let's calculate the total number of fruits brought by Morisette:
+\[ \text{Total number of fruits (Morisette)} = \text{Number of apples} + \text{Number of oranges} = 5 + 10 = 15 \]
+
+Kael brought twice the amount of apples as Morisette:
+\[ \text{Number of apples (Kael)} = 2 \times \text{Number of apples} = 2 \times 5 = 10 \]
+Kael also brought half the number of oranges as Morisette:
+\[ \text{Number of oranges (Kael)} = \frac{1}{2} \times \text{Number of oranges} = \frac{1}{2} \times 10 = 5 \]
+
+Now, let's calculate the total number of fruits brought by Kael:
+\[ \text{Total number of fruits (Kael)} = \text{Number of apples} + \text{Number of oranges} = 10 + 5 = 15 \]
+
+Finally, let's find the total number of fruits brought by both Morisette and Kael:
+\[ \text{Total number of fruits} = \text{Total number of fruits (Morisette)} + \text{Total number of fruits (Kael)} = 15 + 15 = 30 \]
+
+Thus, the total number of fruits is:
+\[
+\boxed{30}
+\]

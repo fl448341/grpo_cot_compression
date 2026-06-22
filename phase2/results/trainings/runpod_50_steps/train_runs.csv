@@ -1,0 +1,5 @@
+lambda,variant,adv_estimator,lr,train_batch_size,ppo_mini_batch,ppo_micro_batch,grpo_n,temperature,max_prompt_len,max_response_len,kl_loss_coef,gpu_mem_util,total_steps,status,last_step,final_resp_len,final_score,final_kl,last_val_acc
+0.0,plain,grpo,1e-5,64,64,1,8,0.7,256,512,0.001,0.2,50,completed,49,218.924,0.705,0.194,0.497
+0.01,plain,grpo,1e-5,64,64,1,8,0.7,256,512,0.001,0.2,50,OOM,6,221.240,0.494,0.031,
+0.05,plain,grpo,1e-5,64,64,1,8,0.7,256,512,0.001,0.2,50,OOM,11,138.434,0.401,0.107,
+0.1,plain,grpo,1e-5,64,64,1,8,0.7,256,512,0.001,0.2,50,OOM,47,5.305,0.034,6.991,0.331

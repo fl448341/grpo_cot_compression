@@ -1,0 +1,28 @@
+=== PRZYKLAD (idx 168), ground truth = 18 ===
+
+PYTANIE: Jimmy has $2 more than twice the money Ethel has. If Ethal has $8, how much money is Jimmy having? Let's think step by step and output the final answer after "####".
+
+[BASELINE (lambda=0, s9)]  231 tok, poprawne=True, pred=18:
+To determine how much money Jimmy has, we need to follow these steps:
+
+1. Identify how much money Ethel has.
+2. Use the given relationship between Jimmy's and Ethel's money to find out how much money Jimmy has.
+
+Step 1: Identify how much money Ethel has.
+Ethel has $8.
+
+Step 2: Use the relationship between Jimmy's and Ethel's money.
+The problem states that Jimmy has $2 more than twice the amount of money Ethel has. We can express this relationship with the following equation:
+\[ \text{Jimmy's money} = 2 \times \text{Ethel's money} + 2 \]
+
+Substitute the value of Ethel's money into the equation:
+\[ \text{Jimmy's money} = 2 \times 8 + 2 \]
+
+First, calculate \(2 \times 8\):
+\[ 2 \times 8 = 16 \] […]
+
+[NAJLEPSZY (lambda=0.05, s12)]  45 tok, poprawne=True, pred=18:
+Twice the amount Ethel has is $8 \times 2 = 16$. Jimmy has $2$ more than that, so Jimmy has $16 + 2 = \boxed{18}$.
+
+[COLLAPSE (przetrenowany, lambda=0.01, s15)]  3 tok, poprawne=False, pred=16:
+$16

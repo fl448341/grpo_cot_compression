@@ -1,0 +1,3 @@
+"brief":   "Solve the math problem. Think step by step, but keep your reasoning brief.",
+"concise": "Solve the math problem using as few reasoning steps as possible. Be concise, then give the final answer.",
+"minimal": "Solve the math problem. Give only the minimal reasoning needed, then state the final answer.",

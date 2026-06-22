@@ -1,0 +1,312 @@
+2026-06-21 00:03:05,202	WARNING utils.py:461 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-06-21 00:03:05,202	WARNING utils.py:473 -- Ray currently does not support initializing Ray with fractional cpus. Your num_cpus will be truncated from 10.2 to 10.
+2026-06-21 00:03:06,403	INFO worker.py:2012 -- Started a local Ray instance.
+/usr/local/lib/python3.10/dist-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(main_task pid=17898)[0m {'actor_rollout_ref': {'actor': {'clip_ratio': 0.2,
+[36m(main_task pid=17898)[0m                                  'entropy_coeff': 0.001,
+[36m(main_task pid=17898)[0m                                  'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=17898)[0m                                                  'grad_offload': False,
+[36m(main_task pid=17898)[0m                                                  'model_dtype': 'bf16',
+[36m(main_task pid=17898)[0m                                                  'optimizer_offload': False,
+[36m(main_task pid=17898)[0m                                                  'param_offload': False,
+[36m(main_task pid=17898)[0m                                                  'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=17898)[0m                                  'grad_clip': 1.0,
+[36m(main_task pid=17898)[0m                                  'kl_loss_coef': -0.1,
+[36m(main_task pid=17898)[0m                                  'kl_loss_type': 'low_var_kl',
+[36m(main_task pid=17898)[0m                                  'optim': {'lr': 1e-05,
+[36m(main_task pid=17898)[0m                                            'lr_warmup_steps_ratio': 0.0,
+[36m(main_task pid=17898)[0m                                            'min_lr_ratio': None,
+[36m(main_task pid=17898)[0m                                            'total_training_steps': -1,
+[36m(main_task pid=17898)[0m                                            'warmup_style': 'constant'},
+[36m(main_task pid=17898)[0m                                  'ppo_epochs': 1,
+[36m(main_task pid=17898)[0m                                  'ppo_max_token_len_per_gpu': 16384,
+[36m(main_task pid=17898)[0m                                  'ppo_micro_batch_size': 1,
+[36m(main_task pid=17898)[0m                                  'ppo_mini_batch_size': 64,
+[36m(main_task pid=17898)[0m                                  'shuffle': False,
+[36m(main_task pid=17898)[0m                                  'strategy': 'fsdp',
+[36m(main_task pid=17898)[0m                                  'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=17898)[0m                                  'use_dynamic_bsz': False,
+[36m(main_task pid=17898)[0m                                  'use_kl_loss': True},
+[36m(main_task pid=17898)[0m                        'hybrid_engine': True,
+[36m(main_task pid=17898)[0m                        'model': {'enable_gradient_checkpointing': True,
+[36m(main_task pid=17898)[0m                                  'external_lib': None,
+[36m(main_task pid=17898)[0m                                  'override_config': {},
+[36m(main_task pid=17898)[0m                                  'path': 'Qwen/Qwen2.5-0.5B-Instruct',
+[36m(main_task pid=17898)[0m                                  'use_remove_padding': False},
+[36m(main_task pid=17898)[0m                        'ref': {'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=17898)[0m                                                'param_offload': False,
+[36m(main_task pid=17898)[0m                                                'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=17898)[0m                                'log_prob_max_token_len_per_gpu': 16384,
+[36m(main_task pid=17898)[0m                                'log_prob_micro_batch_size': 1,
+[36m(main_task pid=17898)[0m                                'log_prob_use_dynamic_bsz': False,
+[36m(main_task pid=17898)[0m                                'ulysses_sequence_parallel_size': 1},
+[36m(main_task pid=17898)[0m                        'rollout': {'do_sample': True,
+[36m(main_task pid=17898)[0m                                    'dtype': 'bfloat16',
+[36m(main_task pid=17898)[0m                                    'enforce_eager': True,
+[36m(main_task pid=17898)[0m                                    'free_cache_engine': True,
+[36m(main_task pid=17898)[0m                                    'gpu_memory_utilization': 0.2,
+[36m(main_task pid=17898)[0m                                    'ignore_eos': False,
+[36m(main_task pid=17898)[0m                                    'load_format': 'dummy_dtensor',
+[36m(main_task pid=17898)[0m                                    'log_prob_max_token_len_per_gpu': 16384,
+[36m(main_task pid=17898)[0m                                    'log_prob_micro_batch_size': 1,
+[36m(main_task pid=17898)[0m                                    'log_prob_use_dynamic_bsz': False,
+[36m(main_task pid=17898)[0m                                    'max_num_batched_tokens': 8192,
+[36m(main_task pid=17898)[0m                                    'max_num_seqs': 1024,
+[36m(main_task pid=17898)[0m                                    'n': 8,
+[36m(main_task pid=17898)[0m                                    'name': 'vllm',
+[36m(main_task pid=17898)[0m                                    'prompt_length': 256,
+[36m(main_task pid=17898)[0m                                    'response_length': 512,
+[36m(main_task pid=17898)[0m                                    'temperature': 0.7,
+[36m(main_task pid=17898)[0m                                    'tensor_model_parallel_size': 1,
+[36m(main_task pid=17898)[0m                                    'top_k': -1,
+[36m(main_task pid=17898)[0m                                    'top_p': 1}},
+[36m(main_task pid=17898)[0m  'algorithm': 
+[36m(main_task pid=17898)[0m {'adv_estimator': 'grpo',
+[36m(main_task pid=17898)[0m                'gamma': 1.0,
+[36m(main_task pid=17898)[0m                'kl_ctrl': {'kl_coef': 0.001, 'type': 'fixed'},
+[36m(main_task pid=17898)[0m                'kl_penalty': 'kl',
+[36m(main_task pid=17898)[0m                'lam': 1.0},
+[36m(main_task pid=17898)[0m  'critic': {'cliprange_value': 0.5,
+[36m(main_task pid=17898)[0m             'forward_max_token_len_per_gpu': 32768,
+[36m(main_task pid=17898)[0m             'forward_micro_batch_size': 64,
+[36m(main_task pid=17898)[0m             'grad_clip': 1.0,
+[36m(main_task pid=17898)[0m             'model': {'enable_gradient_checkpointing': False,
+[36m(main_task pid=17898)[0m                       'external_lib': None,
+[36m(main_task pid=17898)[0m                       'fsdp_config': {'fsdp_size': -1,
+[36m(main_task pid=17898)[0m                                       'grad_offload': False,
+[36m(main_task pid=17898)[0m                                       'optimizer_offload': False,
+[36m(main_task pid=17898)[0m                                       'param_offload': False,
+[36m(main_task pid=17898)[0m                                       'wrap_policy': {'min_num_params': 0}},
+[36m(main_task pid=17898)[0m                       'override_config': {},
+[36m(main_task pid=17898)[0m                       'path': '~/models/deepseek-llm-7b-chat',
+[36m(main_task pid=17898)[0m                       'tokenizer_path': 'Qwen/Qwen2.5-0.5B-Instruct',
+[36m(main_task pid=17898)[0m                       'use_remove_padding': False},
+[36m(main_task pid=17898)[0m             'optim': {'lr': 1e-05,
+[36m(main_task pid=17898)[0m                       'lr_warmup_steps_ratio': 0.0,
+[36m(main_task pid=17898)[0m                       'min_lr_ratio': None,
+[36m(main_task pid=17898)[0m                       'total_training_steps': -1,
+[36m(main_task pid=17898)[0m                       'warmup_style': 'constant'},
+[36m(main_task pid=17898)[0m             'ppo_epochs': 1,
+[36m(main_task pid=17898)[0m             'ppo_max_token_len_per_gpu': 32768,
+[36m(main_task pid=17898)[0m             'ppo_micro_batch_size': 64,
+[36m(main_task pid=17898)[0m             'ppo_mini_batch_size': 64,
+[36m(main_task pid=17898)[0m             'shuffle': False,
+[36m(main_task pid=17898)[0m             'strategy': 'fsdp',
+[36m(main_task pid=17898)[0m             'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=17898)[0m             'use_dynamic_bsz': False},
+[36m(main_task pid=17898)[0m  'data': {'max_prompt_length': 256,
+[36m(main_task pid=17898)[0m           'max_response_length': 512,
+[36m(main_task pid=17898)[0m           'prompt_key': 'prompt',
+[36m(main_task pid=17898)[0m           'return_raw_chat': False,
+[36m(main_task pid=17898)[0m           'return_raw_input_ids': False,
+[36m(main_task pid=17898)[0m           'tokenizer': None,
+[36m(main_task pid=17898)[0m           'train_batch_size': 64,
+[36m(main_task pid=17898)[0m           'train_files': '/root/data/gsm8k/train.parquet',
+[36m(main_task pid=17898)[0m           'val_batch_size': 200,
+[36m(main_task pid=17898)[0m           'val_files': '/root/data/gsm8k/test.parquet'},
+[36m(main_task pid=17898)[0m  'reward_model': {'enable': False,
+[36m(main_task pid=17898)[0m                   'forward_max_token_len_per_gpu': 32768,
+[36m(main_task pid=17898)[0m                   'max_length': None,
+[36m(main_task pid=17898)[0m                   'micro_batch_size': 64,
+[36m(main_task pid=17898)[0m                   'model': {'external_lib': None,
+[36m(main_task pid=17898)[0m                             'fsdp_config': {'min_num_params': 0,
+[36m(main_task pid=17898)[0m                                             'param_offload': False},
+[36m(main_task pid=17898)[0m                             'input_tokenizer': 'Qwen/Qwen2.5-0.5B-Instruct',
+[36m(main_task pid=17898)[0m                             'path': '~/models/FsfairX-LLaMA3-RM-v0.1',
+[36m(main_task pid=17898)[0m                             'use_remove_padding': False},
+[36m(main_task pid=17898)[0m                   'strategy': 'fsdp',
+[36m(main_task pid=17898)[0m                   'ulysses_sequence_parallel_size': 1,
+[36m(main_task pid=17898)[0m                   'use_dynamic_bsz': False},
+[36m(main_task pid=17898)[0m  'trainer': {'critic_warmup': 0,
+[36m(main_task pid=17898)[0m              'default_hdfs_dir': None,
+[36m(main_task pid=17898)[0m              'default_local_dir': '/root/rl/phase2/ckpts/grpo_lam0.01_plain_kl-0.1',
+[36m(main_task pid=17898)[0m              'experiment_name': 'grpo_lam0.01_plain_kl-0.1',
+[36m(main_task pid=17898)[0m              'logger': ['console'],
+[36m(main_task pid=17898)[0m              'n_gpus_per_node': 1,
+[36m(main_task pid=17898)[0m              'nnodes': 1,
+[36m(main_task pid=17898)[0m              'project_name': 'rl_proj7',
+[36m(main_task pid=17898)[0m              'save_freq': 3,
+[36m(main_task pid=17898)[0m              'test_freq': 25,
+[36m(main_task pid=17898)[0m              'total_epochs': 30,
+[36m(main_task pid=17898)[0m              'total_training_steps': 15,
+[36m(main_task pid=17898)[0m              'val_before_train': False}}
+[36m(main_task pid=17898)[0m /usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+[36m(main_task pid=17898)[0m No module named 'vllm._version'
+[36m(main_task pid=17898)[0m   from vllm.version import __version__ as VLLM_VERSION
+[36m(main_task pid=17898)[0m [RewardManager] length reward config: {'lam': 0.01, 'variant': 'plain', 'target': 0.0, 'norm': 512.0} | score=robust
+[36m(main_task pid=17898)[0m original dataset len: 7473
+[36m(main_task pid=17898)[0m filter dataset len: 7473
+[36m(main_task pid=17898)[0m original dataset len: 1319
+[36m(main_task pid=17898)[0m filter dataset len: 1319
+[36m(main_task pid=17898)[0m Size of train dataloader: 116
+[36m(main_task pid=17898)[0m Size of val dataloader: 1
+[36m(main_task pid=17898)[0m Total training steps: 15
+[36m(WorkerDict pid=17985)[0m [W621 00:03:17.777928042 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[36m(pid=17985)[0m /usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+[36m(pid=17985)[0m No module named 'vllm._version'
+[36m(pid=17985)[0m   from vllm.version import __version__ as VLLM_VERSION
+[36m(WorkerDict pid=17985)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=17985)[0m   "_name_or_path": "Qwen/Qwen2.5-0.5B-Instruct",
+[36m(WorkerDict pid=17985)[0m   "architectures": [
+[36m(WorkerDict pid=17985)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=17985)[0m   ],
+[36m(WorkerDict pid=17985)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=17985)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=17985)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=17985)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=17985)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=17985)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=17985)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=17985)[0m   "max_window_layers": 21,
+[36m(WorkerDict pid=17985)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=17985)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=17985)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=17985)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=17985)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=17985)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=17985)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=17985)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=17985)[0m   "sliding_window": null,
+[36m(WorkerDict pid=17985)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=17985)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=17985)[0m   "transformers_version": "4.47.1",
+[36m(WorkerDict pid=17985)[0m   "use_cache": true,
+[36m(WorkerDict pid=17985)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=17985)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=17985)[0m }
+[36m(WorkerDict pid=17985)[0m 
+[36m(WorkerDict pid=17985)[0m NCCL version 2.20.5+cuda12.4
+[36m(WorkerDict pid=17985)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=17985)[0m wrap_policy: functools.partial(<function transformer_auto_wrap_policy at 0x7c8b30c64940>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_init_utils.py:440: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m Actor use_remove_padding=False
+[36m(WorkerDict pid=17985)[0m Model config after override: Qwen2Config {
+[36m(WorkerDict pid=17985)[0m   "_name_or_path": "Qwen/Qwen2.5-0.5B-Instruct",
+[36m(WorkerDict pid=17985)[0m   "architectures": [
+[36m(WorkerDict pid=17985)[0m     "Qwen2ForCausalLM"
+[36m(WorkerDict pid=17985)[0m   ],
+[36m(WorkerDict pid=17985)[0m   "attention_dropout": 0.0,
+[36m(WorkerDict pid=17985)[0m   "eos_token_id": 151645,
+[36m(WorkerDict pid=17985)[0m   "hidden_act": "silu",
+[36m(WorkerDict pid=17985)[0m   "hidden_size": 896,
+[36m(WorkerDict pid=17985)[0m   "initializer_range": 0.02,
+[36m(WorkerDict pid=17985)[0m   "intermediate_size": 4864,
+[36m(WorkerDict pid=17985)[0m   "max_position_embeddings": 32768,
+[36m(WorkerDict pid=17985)[0m   "max_window_layers": 21,
+[36m(WorkerDict pid=17985)[0m   "model_type": "qwen2",
+[36m(WorkerDict pid=17985)[0m   "num_attention_heads": 14,
+[36m(WorkerDict pid=17985)[0m   "num_hidden_layers": 24,
+[36m(WorkerDict pid=17985)[0m   "num_key_value_heads": 2,
+[36m(WorkerDict pid=17985)[0m   "pad_token_id": 151643,
+[36m(WorkerDict pid=17985)[0m   "rms_norm_eps": 1e-06,
+[36m(WorkerDict pid=17985)[0m   "rope_scaling": null,
+[36m(WorkerDict pid=17985)[0m   "rope_theta": 1000000.0,
+[36m(WorkerDict pid=17985)[0m   "sliding_window": null,
+[36m(WorkerDict pid=17985)[0m   "tie_word_embeddings": true,
+[36m(WorkerDict pid=17985)[0m   "torch_dtype": "bfloat16",
+[36m(WorkerDict pid=17985)[0m   "transformers_version": "4.47.1",
+[36m(WorkerDict pid=17985)[0m   "use_cache": true,
+[36m(WorkerDict pid=17985)[0m   "use_sliding_window": false,
+[36m(WorkerDict pid=17985)[0m   "vocab_size": 151936
+[36m(WorkerDict pid=17985)[0m }
+[36m(WorkerDict pid=17985)[0m 
+[36m(WorkerDict pid=17985)[0m Qwen2ForCausalLM contains 494.03M parameters
+[36m(WorkerDict pid=17985)[0m wrap_policy: functools.partial(<function transformer_auto_wrap_policy at 0x7c8b30c64940>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_init_utils.py:440: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m Total steps: 15, num_warmup_steps: 0
+[36m(WorkerDict pid=17985)[0m Actor use_remove_padding=False
+[36m(WorkerDict pid=17985)[0m Before building vllm rollout, memory allocated (GB): 1.840451717376709, memory reserved (GB): 2.150390625
+[36m(WorkerDict pid=17985)[0m WARNING 06-21 00:03:25 config.py:380] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+[36m(WorkerDict pid=17985)[0m local rank 0
+[36m(WorkerDict pid=17985)[0m INFO 06-21 00:03:25 selector.py:115] Using XFormers backend.
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/xformers/ops/fmha/flash.py:211: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+[36m(WorkerDict pid=17985)[0m   @torch.library.impl_abstract("xformers_flash::flash_fwd")
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/xformers/ops/fmha/flash.py:344: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+[36m(WorkerDict pid=17985)[0m   @torch.library.impl_abstract("xformers_flash::flash_bwd")
+[36m(WorkerDict pid=17985)[0m no hf weight loader need to be updated
+[36m(WorkerDict pid=17985)[0m INFO 06-21 00:03:26 selector.py:115] Using XFormers backend.
+[36m(WorkerDict pid=17985)[0m before init cache memory allocated: 2.976972288GB, reserved: 3.001024512GB
+[36m(WorkerDict pid=17985)[0m after init cache memory allocated: 7.002127872GB, reserved: 7.027556352GB
+[36m(WorkerDict pid=17985)[0m kwargs: {'n': 8, 'logprobs': 1, 'max_tokens': 512, 'detokenize': False, 'temperature': 0.7, 'top_k': -1, 'top_p': 1, 'ignore_eos': False}
+[36m(WorkerDict pid=17985)[0m After building vllm rollout, memory allocated (GB): 5.601014614105225, memory reserved (GB): 6.544921875
+[36m(WorkerDict pid=17985)[0m After building sharding manager, memory allocated (GB): 5.601014614105225, memory reserved (GB): 6.544921875
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:689: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(main_task pid=17898)[0m Using LocalLogger is deprecated. The constructor API will change 
+[36m(main_task pid=17898)[0m epoch 0, step 1
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:716: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+[36m(WorkerDict pid=17985)[0m   with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+[36m(main_task pid=17898)[0m step:1 - global_seqlen/min:214116.000 - global_seqlen/max:214116.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:214116.000 - global_seqlen/balanced_max:214116.000 - global_seqlen/mean:214116.000 - actor/kl_loss:0.000 - actor/kl_coef:-0.100 - actor/entropy_loss:0.260 - actor/pg_loss:0.096 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.980 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.423 - critic/score/max:0.999 - critic/score/min:-0.010 - critic/rewards/mean:0.423 - critic/rewards/max:0.999 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.090 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.090 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:344.664 - response_length/max:512.000 - response_length/min:22.000 - response_length/clip_ratio:0.279 - prompt_length/mean:73.531 - prompt_length/max:126.000 - prompt_length/min:45.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:27.789 - timing_s/ref:7.927 - timing_s/adv:0.142 - timing_s/update_actor:27.504 - timing_s/step:63.376 - timing_per_token_ms/ref:0.037 - timing_per_token_ms/update_actor:0.128 - timing_per_token_ms/gen:0.157 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 2
+[36m(main_task pid=17898)[0m step:2 - global_seqlen/min:212020.000 - global_seqlen/max:212020.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:212020.000 - global_seqlen/balanced_max:212020.000 - global_seqlen/mean:212020.000 - actor/kl_loss:0.000 - actor/kl_coef:-0.100 - actor/entropy_loss:0.243 - actor/pg_loss:0.080 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.973 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.400 - critic/score/max:0.999 - critic/score/min:-0.010 - critic/rewards/mean:0.400 - critic/rewards/max:0.999 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.077 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.077 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:342.664 - response_length/max:512.000 - response_length/min:24.000 - response_length/clip_ratio:0.234 - prompt_length/mean:71.438 - prompt_length/max:151.000 - prompt_length/min:40.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:27.953 - timing_s/ref:7.915 - timing_s/adv:0.172 - timing_s/update_actor:58.860 - timing_s/step:94.926 - timing_per_token_ms/ref:0.037 - timing_per_token_ms/update_actor:0.278 - timing_per_token_ms/gen:0.159 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 3
+[36m(WorkerDict pid=17985)[0m Saving actor checkpoint to /root/rl/phase2/ckpts/grpo_lam0.01_plain_kl-0.1/actor/global_step_3
+[36m(main_task pid=17898)[0m step:3 - global_seqlen/min:195601.000 - global_seqlen/max:195601.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:195601.000 - global_seqlen/balanced_max:195601.000 - global_seqlen/mean:195601.000 - actor/kl_loss:0.010 - actor/kl_coef:-0.100 - actor/entropy_loss:0.174 - actor/pg_loss:0.096 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.891 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.535 - critic/score/max:0.998 - critic/score/min:-0.010 - critic/rewards/mean:0.535 - critic/rewards/max:0.998 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.089 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.089 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:304.658 - response_length/max:512.000 - response_length/min:16.000 - response_length/clip_ratio:0.104 - prompt_length/mean:77.375 - prompt_length/max:149.000 - prompt_length/min:41.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:25.402 - timing_s/ref:7.916 - timing_s/adv:0.130 - timing_s/update_actor:58.865 - timing_s/save_checkpoint:3.209 - timing_s/step:95.534 - timing_per_token_ms/ref:0.040 - timing_per_token_ms/update_actor:0.301 - timing_per_token_ms/gen:0.163 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 4
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:716: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+[36m(WorkerDict pid=17985)[0m   with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+[36m(main_task pid=17898)[0m step:4 - global_seqlen/min:190648.000 - global_seqlen/max:190648.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:190648.000 - global_seqlen/balanced_max:190648.000 - global_seqlen/mean:190648.000 - actor/kl_loss:0.006 - actor/kl_coef:-0.100 - actor/entropy_loss:0.176 - actor/pg_loss:0.076 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.852 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.541 - critic/score/max:0.998 - critic/score/min:-0.010 - critic/rewards/mean:0.541 - critic/rewards/max:0.998 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.077 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.077 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:295.188 - response_length/max:512.000 - response_length/min:77.000 - response_length/clip_ratio:0.053 - prompt_length/mean:77.172 - prompt_length/max:140.000 - prompt_length/min:40.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:25.038 - timing_s/ref:7.956 - timing_s/adv:0.136 - timing_s/update_actor:57.367 - timing_s/step:90.514 - timing_per_token_ms/ref:0.042 - timing_per_token_ms/update_actor:0.301 - timing_per_token_ms/gen:0.166 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 5
+[36m(main_task pid=17898)[0m step:5 - global_seqlen/min:168561.000 - global_seqlen/max:168561.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:168561.000 - global_seqlen/balanced_max:168561.000 - global_seqlen/mean:168561.000 - actor/kl_loss:0.014 - actor/kl_coef:-0.100 - actor/entropy_loss:0.212 - actor/pg_loss:0.060 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:1.070 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.522 - critic/score/max:0.998 - critic/score/min:-0.010 - critic/rewards/mean:0.522 - critic/rewards/max:0.998 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.063 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.063 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:254.768 - response_length/max:512.000 - response_length/min:75.000 - response_length/clip_ratio:0.039 - prompt_length/mean:74.453 - prompt_length/max:148.000 - prompt_length/min:43.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:24.141 - timing_s/ref:7.897 - timing_s/adv:0.151 - timing_s/update_actor:59.465 - timing_s/step:91.683 - timing_per_token_ms/ref:0.047 - timing_per_token_ms/update_actor:0.353 - timing_per_token_ms/gen:0.185 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 6
+[36m(WorkerDict pid=17985)[0m Saving actor checkpoint to /root/rl/phase2/ckpts/grpo_lam0.01_plain_kl-0.1/actor/global_step_6
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:689: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(main_task pid=17898)[0m step:6 - global_seqlen/min:177803.000 - global_seqlen/max:177803.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:177803.000 - global_seqlen/balanced_max:177803.000 - global_seqlen/mean:177803.000 - actor/kl_loss:0.005 - actor/kl_coef:-0.100 - actor/entropy_loss:0.224 - actor/pg_loss:0.067 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.891 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.463 - critic/score/max:0.998 - critic/score/min:-0.010 - critic/rewards/mean:0.463 - critic/rewards/max:0.998 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.076 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.076 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:269.475 - response_length/max:512.000 - response_length/min:87.000 - response_length/clip_ratio:0.043 - prompt_length/mean:77.797 - prompt_length/max:172.000 - prompt_length/min:39.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:23.776 - timing_s/ref:7.930 - timing_s/adv:0.126 - timing_s/update_actor:57.248 - timing_s/save_checkpoint:2.521 - timing_s/step:91.619 - timing_per_token_ms/ref:0.045 - timing_per_token_ms/update_actor:0.322 - timing_per_token_ms/gen:0.172 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 7
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/distributed/fsdp/_state_dict_utils.py:716: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=17985)[0m   warnings.warn(
+[36m(WorkerDict pid=17985)[0m /usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+[36m(WorkerDict pid=17985)[0m   with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+[36m(main_task pid=17898)[0m step:7 - global_seqlen/min:175681.000 - global_seqlen/max:175681.000 - global_seqlen/minmax_diff:0.000 - global_seqlen/balanced_min:175681.000 - global_seqlen/balanced_max:175681.000 - global_seqlen/mean:175681.000 - actor/kl_loss:0.010 - actor/kl_coef:-0.100 - actor/entropy_loss:0.236 - actor/pg_loss:0.073 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:1.148 - mfu/actor:0.000 - actor/lr:0.000 - critic/score/mean:0.466 - critic/score/max:0.999 - critic/score/min:-0.010 - critic/rewards/mean:0.466 - critic/rewards/max:0.999 - critic/rewards/min:-0.010 - critic/advantages/mean:-0.082 - critic/advantages/max:2.475 - critic/advantages/min:-2.475 - critic/returns/mean:-0.082 - critic/returns/max:2.475 - critic/returns/min:-2.475 - response_length/mean:265.799 - response_length/max:512.000 - response_length/min:46.000 - response_length/clip_ratio:0.057 - prompt_length/mean:77.328 - prompt_length/max:127.000 - prompt_length/min:27.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:23.462 - timing_s/ref:7.888 - timing_s/adv:0.154 - timing_s/update_actor:60.098 - timing_s/step:91.633 - timing_per_token_ms/ref:0.045 - timing_per_token_ms/update_actor:0.342 - timing_per_token_ms/gen:0.172 - timing_per_token_ms/adv:0.001
+[36m(main_task pid=17898)[0m epoch 0, step 8
+Error executing job with overrides: ['algorithm.adv_estimator=grpo', 'algorithm.kl_ctrl.kl_coef=0.001', 'data.train_files=/root/data/gsm8k/train.parquet', 'data.val_files=/root/data/gsm8k/test.parquet', 'data.train_batch_size=64', 'data.val_batch_size=200', 'data.max_prompt_length=256', 'data.max_response_length=512', 'actor_rollout_ref.model.path=Qwen/Qwen2.5-0.5B-Instruct', 'actor_rollout_ref.model.enable_gradient_checkpointing=True', 'actor_rollout_ref.model.use_remove_padding=False', 'actor_rollout_ref.actor.optim.lr=1e-5', 'actor_rollout_ref.actor.ppo_mini_batch_size=64', 'actor_rollout_ref.actor.ppo_micro_batch_size=1', 'actor_rollout_ref.actor.use_kl_loss=True', 'actor_rollout_ref.actor.kl_loss_coef=-0.1', 'actor_rollout_ref.actor.kl_loss_type=low_var_kl', '+actor_rollout_ref.actor.fsdp_config.model_dtype=bf16', 'actor_rollout_ref.rollout.name=vllm', 'actor_rollout_ref.rollout.tensor_model_parallel_size=1', 'actor_rollout_ref.rollout.dtype=bfloat16', 'actor_rollout_ref.rollout.temperature=0.7', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.2', 'actor_rollout_ref.rollout.n=8', 'actor_rollout_ref.rollout.log_prob_micro_batch_size=1', 'actor_rollout_ref.ref.log_prob_micro_batch_size=1', 'trainer.logger=[console]', 'trainer.n_gpus_per_node=1', 'trainer.nnodes=1', 'trainer.save_freq=3', 'trainer.test_freq=25', 'trainer.total_training_steps=15', 'trainer.project_name=rl_proj7', 'trainer.experiment_name=grpo_lam0.01_plain_kl-0.1', 'trainer.default_local_dir=/root/rl/phase2/ckpts/grpo_lam0.01_plain_kl-0.1', 'trainer.default_hdfs_dir=null', '+trainer.val_before_train=False']
+Traceback (most recent call last):
+  File "/workspace/rl/TinyZero/verl/trainer/main_ppo.py", line 130, in main
+    ray.get(main_task.remote(config))
+  File "/usr/local/lib/python3.10/dist-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/ray/_private/client_mode_hook.py", line 107, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/ray/_private/worker.py", line 2980, in get
+    values, debugger_breakpoint = worker.get_objects(
+  File "/usr/local/lib/python3.10/dist-packages/ray/_private/worker.py", line 1023, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::main_task()[39m (pid=17898, ip=172.18.0.2)
+  File "/workspace/rl/TinyZero/verl/trainer/main_ppo.py", line 217, in main_task
+    trainer.fit()
+  File "/workspace/rl/TinyZero/verl/trainer/ppo/ray_trainer.py", line 657, in fit
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+  File "/workspace/rl/TinyZero/verl/single_controller/ray/base.py", line 42, in func
+    output = ray.get(output)
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=17985, ip=172.18.0.2, actor_id=60c49ea8a64fa573833dfdd701000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7c8b07c90be0>)
+  File "/workspace/rl/TinyZero/verl/single_controller/ray/base.py", line 399, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+  File "/workspace/rl/TinyZero/verl/single_controller/base/decorator.py", line 404, in inner
+    return func(*args, **kwargs)
+  File "/workspace/rl/TinyZero/verl/workers/fsdp_workers.py", line 375, in update_actor
+    metrics = self.actor.update_policy(data=data)
+  File "/workspace/rl/TinyZero/verl/workers/actor/dp_actor.py", line 275, in update_policy
+    loss.backward()
+  File "/usr/local/lib/python3.10/dist-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.10/dist-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 0 has a total capacity of 23.52 GiB of which 2.23 GiB is free. Including non-PyTorch memory, this process has 20.88 GiB memory in use. Of the allocated memory 20.01 GiB is allocated by PyTorch, and 224.60 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

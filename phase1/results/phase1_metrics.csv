@@ -1,0 +1,5 @@
+variant,system_prompt,n,accuracy,avg_tokens,avg_tokens_correct
+baseline (natural),,200,0.41,290.49,256.40
+brief,"Solve the math problem. Think step by step, but keep your reasoning brief.",200,0.3750,220.25,167.06
+concise,"Solve the math problem using as few reasoning steps as possible. Be concise, then give the final answer.",200,0.350,232.60,173.33
+minimal,"Solve the math problem. Give only the minimal reasoning needed, then state the final answer.",200,0.3650,224.40,188.13
